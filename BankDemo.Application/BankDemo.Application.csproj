@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Beneficiaries\" />
+    <Folder Include="Transfers\CreateTransfer\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BankDemo.Domain\BankDemo.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
