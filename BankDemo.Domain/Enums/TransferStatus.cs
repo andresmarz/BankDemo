@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace BankDemo.Domain.Enums;
 
-namespace BankDemo.Domain.Enums
+public enum TransferStatus
 {
-    internal class TransferStatus
-    {
-    }
+    Pending,
+    Completed,
+    Rejected
 }
