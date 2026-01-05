@@ -13,8 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankDemo.Infrastructure", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "database", "database", "{1FFBCE48-CF80-47FA-8CF9-971E8C4B38D8}"
 	ProjectSection(SolutionItems) = preProject
-		001_schema.sql = 001_schema.sql
-		002_seed.sql = 002_seed.sql
+		database\001_schema.sql = database\001_schema.sql
+		database\002_seed.sql = database\002_seed.sql
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{73CD8598-435F-4C7C-8215-9D116BB554E5}"
