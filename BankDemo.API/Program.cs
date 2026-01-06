@@ -1,22 +1,37 @@
+using BankDemo.Application.Interfaces.Repositories;
+using BankDemo.Application.Transfers.CreateTransfer;
+using BankDemo.Infrastructure.Data.Dapper;
+using BankDemo.Infrastructure.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+// Controllers
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+
+// Swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Infrastructure
+builder.Services.AddSingleton<SqlConnectionFactory>();
+
+// Repositories
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddScoped<IBeneficiaryRepository, BeneficiaryRepository>();
+builder.Services.AddScoped<ITransferRepository, TransferRepository>();
+
+// Use cases
+builder.Services.AddScoped<CreateTransferHandler>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 
