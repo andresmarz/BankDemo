@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Beneficiaries\" />
-    <Folder Include="Transfers\CreateTransfer\" />
   </ItemGroup>
 
   <ItemGroup>
